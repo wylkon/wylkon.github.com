@@ -67,7 +67,7 @@
   isRevealed,
   noscroll,
   isAnimating,
-  container = document.getElementById( 'container' ),
+  container = document.getElementById( 'wrap-content' ),
   trigger = container.querySelector( 'a.click-to-scroll' );
 
   function scrollY() {
