@@ -9,13 +9,14 @@ header
   background: url(http://ppcdn.500px.org/62148281/efad04811d65a7342af4d09ef049272549c915d2/2048.jpg) center top no-repeat
   background-size: cover
   z-index: 2
-
   webkit-transition-property: opacity, -webkit-transform
   transition-property: opacity, transform
   -webkit-transition-duration: 1s
-  transition-duration: 1s
-  transform: translateY(-100%) scale(.9)
-  opacity: 0
+
+  .scrolled &
+    transition-duration: 1s
+    transform: translateY(-100%) scale(.9)
+    opacity: 0
 
   .content-header
     text-align: center
@@ -31,9 +32,6 @@ header
       font-size: 1.8rem
       color: #fff
 
-      a
-        color: #D35400
-
     ul
       list-style: none
 
@@ -47,7 +45,7 @@ header
 
           &:hover,
           &:focus
-            color: #36D7B7
+            color: #C8F7C5
 
 
     .click-to-scroll
@@ -60,6 +58,9 @@ header
       color: #fff
       font-size: 1.6rem
       font-weight: 300
+
+      &:hover
+        color: #C8F7C5
 
       &:before
         bottom: 0
