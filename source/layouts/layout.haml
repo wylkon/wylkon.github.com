@@ -12,8 +12,10 @@
     %link{href:'http://fonts.googleapis.com/css?family=Open+Sans:400,700,300', rel:'stylesheet', type:'text/css'}
     = stylesheet_link_tag "normalize", "application"
 
-    -# Javascripts
-    = javascript_include_tag  "all"
 
-  %body{class: page_classes}
+  %body{class: page_classes, id: "container"}
     = yield
+
+    -# Javascripts
+    %script{src: "http://tympanus.net/Development/ArticleIntroEffects/js/classie.js"}
+    = javascript_include_tag  "application"
