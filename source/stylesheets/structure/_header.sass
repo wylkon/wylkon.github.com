@@ -14,7 +14,7 @@ header
   -webkit-backface-visibility: hidden
   backface-visibility: hidden
 
-  .scrolled &
+  .show-content &
     -webkit-transform: translateY(-100%) scale(.9)
     -moz-transform: translateY(-100%) scale(.9)
     -ms-transform: translateY(-100%) scale(.9)
@@ -51,7 +51,7 @@ header
             color: #C8F7C5
 
 
-    .click-to-scroll
+    .click-to-hide
       position: absolute
       bottom: 0px
       left: 50%
@@ -69,3 +69,14 @@ header
         bottom: 0
         font-size: 7rem
         display: block
+
+@media (max-width: 768px)
+  header
+    .content-header
+      padding-top: 13rem
+
+      h3
+        font-size: 2.5rem
+
+      ul li a
+        font-size: 4rem
