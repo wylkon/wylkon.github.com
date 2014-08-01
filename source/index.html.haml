@@ -15,7 +15,7 @@ title: Home
         %li= link_to "", "http://twitter.com/wylkon", class: "icon-twitter", target: "_blank"
         %li= link_to "", "http://tumblr.com/wylkon", class: "icon-Tumblr", target: "_blank"
 
-      = link_to "Click to scroll", "#", class: "click-to-scroll icon-arrow-down2"
+      = link_to "Click to scroll", "#", class: "click-to-hide icon-arrow-down2"
 
   %article
 
@@ -33,8 +33,6 @@ title: Home
             = link_to "Locaweb Style", "http://locaweb.github.io/locawebstyle", target: "_blank"
             and Paixaonacional.org.
 
-    .wrap-article
-      .content-article
         .subtly
           %h3 EXPERTISE
           %h4 Professional capabilities
@@ -56,8 +54,6 @@ title: Home
             %li.icon-checkmark Mobile web Apps creation (iPhone / Android / iPad).
             %li.icon-checkmark Development of interfaces with HTML using Ruby on Rails, CakePHP, Django and others frameworks.
 
-    .wrap-article
-      .content-article
         .subtly
           %h4 EXPERIENCE
 
@@ -106,9 +102,6 @@ title: Home
             %br/
             I’ve worked in Dburns Design for 1 year and 2 months, starting as an intern and then promoted to a Junior Front-end. During my internship I studied HTML, CSS and jQuery implementing websites in PHP and Ruby on Rails. I also learned how to work with CMS and CMS Blogs templates. In this period I began to follow the Web Standards applying SEO techniques supervised by my Technology Manager
 
-    .wrap-article
-      .content-article
-        .subtly
 
           %h4 ARTICLES
           %ul
@@ -120,4 +113,4 @@ title: Home
         - 5.times do
           %li
             = link_to "#" do
-              = image_tag "http://33.media.tumblr.com/tumblr_lzhyyvNFwm1r42yfqo1_500.png"
+              = image_tag "http://33.media.tumblr.com/tumblr_lzhyyvNFwm1r42yfqo1_500.png", class: 'responsive-img'
