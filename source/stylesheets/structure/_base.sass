@@ -78,7 +78,7 @@ h1
   .content-article
     width: 60%
 
-  .scrolled &
+  .show-content &
     -webkit-transform: translateY(0)
     -moz-transform: translateY(0)
     -ms-transform: translateY(0)
@@ -154,3 +154,20 @@ h1
         font-weight: 300
         border-bottom: 1px solid
         line-height: 1.6
+
+@media (max-width: 768px)
+
+  h1
+    font-size: 3.5rem
+    line-height: 1
+
+  .wrap-article
+
+    .content-article
+      width: 90%
+
+    p.lead
+      font-size: 2rem
+
+  .responsive-img
+    width: 100%
