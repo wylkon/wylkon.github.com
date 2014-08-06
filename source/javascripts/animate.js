@@ -2,27 +2,22 @@ var portfolio = (function () {
   "use strict"
   var contentVisible = false;
 
-
-  var events = {
-    '.click-to-hide|click' : _hideHeader,
-    'window|scroll' : _showHeader
-  }
-
   function init () {
-    _loadEvents();
-    // _hideHeader();
-    // _showHeader();
+    _bindingEvents();
   }
 
-  function _loadEvents () {
-    for (var event in events) {
-      var evt = event.split('|');
-      $(evt[0]).on(evt[1], events[event] );
-    }
+  function _bindingEvents () {
+    $(".click-to-hide").on("click", function () {
+      _hideHeader();
+    });
+
+    $(window).on("scroll", function () {
+      _showHeader();
+    })
   }
 
   function _hideHeader () {
-      addClassHidder(true);
+    addClassHidder(true);
   }
 
   function _showHeader () {
@@ -31,8 +26,10 @@ var portfolio = (function () {
       addClassHidder(false);
       contentVisible = false;
     }
-    if (scrollTop > 200 && !contentVisible) {
+    if (scrollTop > 10 && !contentVisible) {
+
       $(window).scrollTop(1)
+
       addClassHidder(true);
       contentVisible = true;
     }
