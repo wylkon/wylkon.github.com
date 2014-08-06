@@ -33,6 +33,10 @@ body
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+  overflow: hidden
+
+  &.show-content
+    overflow: auto
 
 [class*="content-"]
   width: 80%
@@ -71,10 +75,6 @@ h1
   transform: translateY(700px)
   opacity: 0
 
-  &:nth-of-type(2),
-  &:nth-of-type(4)
-    background: #6C7A89
-
   .content-article
     width: 60%
 
@@ -84,17 +84,8 @@ h1
     -ms-transform: translateY(0)
     transform: translateY(0)
     opacity: 1
-    -webkit-transition-delay: 0.4s
-    transition-delay: 0.4s
-
-    .subtly
-      -webkit-transform: translateY(0)
-      -moz-transform: translateY(0)
-      -ms-transform: translateY(0)
-      transform: translateY(0)
-      -webkit-transition-delay: 0.1s
-      transition-delay: 0.1s
-      opacity: 1
+    -webkit-transition-delay: 0.2s
+    transition-delay: 0.2s
 
   .subtly
     -webkit-transform: translateY(700px)
@@ -105,6 +96,15 @@ h1
     transition-property: opacity, transform
     -webkit-transition-duration: 1s
     transition-duration: 1s
+
+    .show-content &
+      -webkit-transform: translateY(0)
+      -moz-transform: translateY(0)
+      -ms-transform: translateY(0)
+      transform: translateY(0)
+      -webkit-transition-delay: 0.1s
+      transition-delay: 0.1s
+      opacity: 1
 
 
   strong a
