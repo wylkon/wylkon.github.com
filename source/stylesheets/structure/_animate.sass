@@ -1,0 +1,38 @@
+.title,
+header,
+.subtly
+  -webkit-transition-property: opacity, -webkit-transform
+  transition-property: opacity, transform
+  -webkit-transition-duration: 1s
+  transition-duration: 1s
+
+header
+  -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1)
+  transition-timing-function: cubic-bezier(0.7,0,0.3,1)
+  -webkit-transition-duration: 1.2s
+  transition-duration: 1.2s
+
+.title,
+.subtly
+  -webkit-transform: translateY(600px)
+  transform: translateY(600px)
+  opacity: 0
+
+  .show-content &
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+    opacity: 1
+    -webkit-transition-delay: 0.5s
+    transition-delay: 0.5s
+
+
+.show-content
+  header
+    opacity: 0
+    -webkit-transform: translateY(-100%) scale(0.9)
+    transform: translateY(-100%) scale(0.9)
+
+  .subtly
+    -webkit-transition-delay: 0.6s
+    transition-delay: 0.6s
+
